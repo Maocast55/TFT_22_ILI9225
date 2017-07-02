@@ -513,7 +513,7 @@ void TFT_22_ILI9225::setFont(uint8_t* font) {
 }
 
 
-void TFT_22_ILI9225::drawText(uint16_t x, uint16_t y, String s, uint16_t color) {
+uint16_t TFT_22_ILI9225::drawText(uint16_t x, uint16_t y, String s, uint16_t color) {
 
 	uint16_t currx = x;
 
@@ -521,6 +521,7 @@ void TFT_22_ILI9225::drawText(uint16_t x, uint16_t y, String s, uint16_t color) 
 	for (uint8_t k = 0; k < s.length(); k++) {
 		currx += drawChar(currx, y, s.charAt(k), color) + 1;
 	}
+	return currx;
 }
 
 
