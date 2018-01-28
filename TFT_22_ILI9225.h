@@ -224,7 +224,8 @@ class TFT_22_ILI9225 {
 		/// @param	y point coordinate, y-axis
 		/// @param	s text string
 		/// @param	color 16-bit color, default=white
-		void drawText(uint16_t x, uint16_t y, String  s, uint16_t color = COLOR_WHITE);
+		/// @return     char width
+		uint16_t drawText(uint16_t x, uint16_t y, String  s, uint16_t color = COLOR_WHITE);
 
 		/// Calculate 16-bit color from 8-bit Red-Green-Blue components
 		/// @param	red red component, 0x00..0xff
@@ -269,6 +270,7 @@ class TFT_22_ILI9225 {
 		/// @param	y point coordinate, y-axis
 		/// @param	ch ASCII character
 		/// @param	color 16-bit color, default=white
+		/// @return     char width
 		uint16_t drawChar(uint16_t x, uint16_t y, uint16_t ch, uint16_t color = COLOR_WHITE);
 
 	private:
