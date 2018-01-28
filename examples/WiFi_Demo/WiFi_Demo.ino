@@ -54,6 +54,7 @@ void setup() {
 void loop() {
   if (WiFi.status() != WL_CONNECTED) {
     Serial.print("Connecting to ");
+    tft.fillRectangle(10, 40, 200, 56, COLOR_ACACAC);
     tft.drawText(10, 40, "Connecting to " + String(ssid), COLOR_5F7883);
     tft.fillRectangle(10, 60, 200, 76, COLOR_ACACAC);
     Serial.print(ssid);
